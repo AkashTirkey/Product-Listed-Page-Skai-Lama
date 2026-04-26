@@ -18,6 +18,20 @@ body {
 .plpDrawer{
     display: none;
 }
+.plpheading{
+    padding: 20px;
+}
+
+.plpTitle{
+    font-size: 28px;
+    margin: 0;
+}
+
+.plpSubtitle{
+     margin-top: 6px;
+  color: var(--plp_muted);
+  font-size: 14px;
+}
 
 .plpGrid {
   display: grid;

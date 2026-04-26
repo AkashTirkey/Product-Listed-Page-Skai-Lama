@@ -33,6 +33,12 @@
       //assign to state
       plp.state.products = window.shopifyLiquidValuesPLP.products;
 
+      document.querySelector(".plpTitle").textContent =
+        window.shopifyLiquidValuesPLP.collectionTitle;
+
+      document.querySelector(".plpSubtitle").textContent =
+        window.shopifyLiquidValuesPLP.collectionSubtitles;
+
       console.log("Products:", plp.state.products);
 
       //trigger render
