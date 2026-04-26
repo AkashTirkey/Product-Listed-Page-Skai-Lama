@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-listed-Page</title>
+    <link rel="stylesheet" href="plp.css">
+</head>
+
+<body>
+    <div class="plpHeader">
+        <button class="plpCartBtn">
+            Cart(<span data-cart-count>0</span>)
+        </button>
+    </div>
+
+    <!-- Drawer structure -->
+    <div class="plpDrawer" data-drawer>
+        <div class="plpDrawerContent">
+            <button class="plpDrawerClose">X</button>
+            <div class="plpDrawerBody"></div>
+            <div class="plpDrawerFooter">
+                Subtotal: <span data-cart-subtotal>₹0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="plpToast" data-toast style="display:none;">
+        Item added to cart
+    </div>
+
+    <div class="plpGrid" data-grid-mount></div>
+
+    <!-- // DATA FIRST -->
+    <script>
+        window.shopifyLiquidValuesPLP = {
+            products: [
+                {
+                    id: 1,
+                    title: "Classic T-Shirt",
+                    product_type: "Clothing",
+                    image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=400",
+                    price: 49900,
+                    variants: [
+                        { id: 101, title: "S" },
+                        { id: 102, title: "M" },
+                        { id: 103, title: "L" }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Premium Hoodie",
+                    product_type: "Clothing",
+                    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400",
+                    price: 89900,
+                    compare_at_price: 69900,
+                    variants: [
+                        { id: 201, title: "M" },
+                        { id: 202, title: "L" }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Running Shoes",
+                    product_type: "Footwear",
+                    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+                    price: 199900,
+                    compare_at_price: 219000,
+                    variants: [
+                        { id: 301, title: "8" },
+                        { id: 302, title: "9" }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "Denim Jacket",
+                    product_type: "Clothing",
+                    image: "https://images.unsplash.com/photo-1543076447-215ad9ba6923?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    price: 149900,
+                    variants: [
+                        { id: 401, title: "M" },
+                        { id: 402, title: "L" }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "Smart Watch",
+                    product_type: "Accessories",
+                    image: "https://images.unsplash.com/photo-1617043983671-adaadcaa2460?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    price: 299900,
+                    variants: [
+                        { id: 501, title: "Black" },
+                        { id: 502, title: "Silver" }
+                    ]
+                },
+                {
+                    id: 6,
+                    title: "Backpack",
+                    product_type: "Accessories",
+                    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400",
+                    price: 129900,
+                    variants: [
+                        { id: 601, title: "Standard" }
+                    ]
+                }
+            ]
+        };
+    </script>
+    <!-- script file -->
+    <script src="plp.js"></script>
+</body>
+
+</html>

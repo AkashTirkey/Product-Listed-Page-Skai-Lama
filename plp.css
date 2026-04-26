@@ -1,0 +1,145 @@
+/* ROOT VARIABLES */
+:root {
+  --plp_bg: #f6f7fb;
+  --plp_card_bg: #ffffff;
+  --plp_text: #222;
+  --plp_muted: #777;
+  --plp_primary: #111;
+  --plp_radius: 12px;
+}
+
+/* RESET-ish */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--plp_bg);
+  color: var(--plp_text);
+}
+.plpDrawer{
+    display: none;
+}
+
+.plpGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.plpCard {
+  background: var(--plp_card_bg);
+  border-radius: var(--plp_radius);
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.plpCard:hover {
+  transform: translateY(-4px);
+}
+
+.plpCardImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.plpCardTitle {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.plpCardCategory {
+  font-size: 13px;
+  color: var(--plp_muted);
+  margin-bottom: 8px;
+}
+
+.plpCardPrice {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.plpVariantSelect {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.plpBtn {
+  width: 100%;
+  padding: 10px;
+  background: var(--plp_primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.plpBtn:hover {
+  opacity: 0.9;
+}
+.plpHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.plpCartBtn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Drawer */
+.plpDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100%;
+  background: white;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.2);
+  display: none;
+}
+
+.plpDrawerContent {
+  padding: 16px;
+}
+
+.plpDrawerBody {
+  margin-top: 10px;
+}
+
+.plpDrawerFooter {
+  margin-top: 20px;
+  font-weight: bold;
+}
+/* cart row */
+.plpCartRow {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.plpQtyControls {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* toast */
+.plpToast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
